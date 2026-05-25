@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		4C5ADCEC2FC34EB6000AD2FD /* Dream.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Dream.xcodeproj; sourceTree = "<group>"; };
 		4CC9C7CA2FC34B6F002221B1 /* Dream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -29,6 +30,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C5ADCEF2FC34EB6000AD2FD /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4CC9C7C12FC34B6F002221B1 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +103,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4CC9C7CB2FC34B6F002221B1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4C5ADCEF2FC34EB6000AD2FD /* Products */;
+					ProjectRef = 4C5ADCEC2FC34EB6000AD2FD /* Dream.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4CC9C7C92FC34B6F002221B1 /* Dream */,

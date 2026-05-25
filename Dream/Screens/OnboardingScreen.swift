@@ -4,6 +4,16 @@ struct OnboardingScreen: View {
     var onSignIn: () -> Void
     var onCreateAccount: () -> Void = {}
 
+    private var tagline: AttributedString {
+        var part1 = AttributedString("Where dreams\n")
+        part1.swiftUI.font = DreamTheme.Font.display(28, weight: .regular)
+        var part2 = AttributedString("meet")
+        part2.swiftUI.font = DreamTheme.Font.display(28, weight: .light, italic: true)
+        var part3 = AttributedString(" opportunity.")
+        part3.swiftUI.font = DreamTheme.Font.display(28, weight: .regular)
+        return part1 + part2 + part3
+    }
+
     var body: some View {
         ZStack(alignment: .top) {
             DreamTheme.paper.ignoresSafeArea()
@@ -30,14 +40,7 @@ struct OnboardingScreen: View {
                         .tracking(-2)
                         .padding(.bottom, 8)
 
-                    (
-                        Text("Where dreams\n")
-                            .font(DreamTheme.Font.display(28, weight: .regular))
-                        + Text("meet")
-                            .font(DreamTheme.Font.display(28, weight: .light, italic: true))
-                        + Text(" opportunity.")
-                            .font(DreamTheme.Font.display(28, weight: .regular))
-                    )
+                    Text(tagline)
                     .multilineTextAlignment(.center)
                     .foregroundStyle(DreamTheme.ink)
                     .tracking(-0.6)
